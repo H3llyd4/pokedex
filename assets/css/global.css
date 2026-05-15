@@ -18,4 +18,37 @@ body {
     width: 100vw;
     padding: 1rem;
     background-color: #FFF;
+    position: relative;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background: url(../image/pokeball.png) no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.content h1 {
+   font-size: 2.2rem;
+   margin-left: 0.5rem;
+}
+
+.content .arrow{
+    
+    cursor: pointer;
 }

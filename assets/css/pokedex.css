@@ -96,7 +96,7 @@
     margin: .25rem 0;
     font-size: .625rem;
     border-radius: 1rem;
-filter: brightness(1.15);
+    filter: brightness(1.15);
 }
 
 .pokemon .types {

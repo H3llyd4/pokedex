@@ -18,6 +18,10 @@
         margin: 1rem auto;
         border-radius: 1rem;
     }
+
+    .arrow {
+        display: none;
+    }
   
     .pokemons {
         grid-template-columns: repeat(4, 1fr);

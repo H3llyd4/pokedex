@@ -3,31 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="assets/css/global.css">
+    <title>PokeCentral</title>
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
     <section class="content">
         <header>
-            <svg width="24px" height="24px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" class="arrow">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_left [#000000]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -6679.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M338.61,6539 L340,6537.594 L331.739,6528.987 L332.62,6528.069 L332.615,6528.074 L339.955,6520.427 L338.586,6519 C336.557,6521.113 330.893,6527.014 329,6528.987 C330.406,6530.453 329.035,6529.024 338.61,6539" id="arrow_left-[#000000]" class="arrow"> </path> </g> </g> </g> </g>
-            </svg>
-            
-            <h1>Pokedex</h1>
+            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <h1>Qual Pokémon você está procurando?</h1>
         </header>
-        
 
-        <ol id="pokemonList" class="pokemons">
-           
-        </ol>
+        <div class="search">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <input type="text" id="searchInput" placeholder="Buscar Pokémon">
+        </div>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button"> Load More</button>
+        <div class="options">
+            
+            <a href="pokedex.html" class="pokedex">Pokedex
+                <img src="assets/image/ball.png" alt="Pokeball">
+            </a>
+            
+            
+            <a href="movies.html" class="movies">Movies
+                <img src="assets/image/raio.png" alt="Raio">
+            </a>
+            
+        </div>
+
+        <div class="attend">
+            <h2>Assistir</h2>
+            <div class="carousel">
+                <button class="arrow-left" id="arrow-left" type="button">
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+                <ul class="movies-list" id="moviesList">
+                    <li class="movie-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/z3hMX65Khtg?si=HAvHI5B7iZ4ZkZ6l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Pokémon, Escolho-te a Ti!</h4>
+                        <h4>Pokémon TV</h4>
+                        <p>Ep 1 | Temp 1 </p>
+                    </li>
+                    <li class="movie-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/h6LFdBPjbf4?si=2pCjYuyfvWK-3hP1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Emergência Pokémon</h4>
+                        <h4>Pokémon TV</h4>
+                        <p>Ep 2 | Temp 1 </p>
+                    </li>
+                    <li class="movie-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ObtS79k2NM4?si=4z4mFyeoclsPtpMW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <h4>Ash Captura um Pokémon</h4>
+                        <h4>Pokémon TV</h4>
+                        <p>Ep 3 | Temp 1 </p>
+                    </li>
+                </ul>
+                <button class="arrow-right" id="arrow-right" type="button">
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4697 5.46967C13.7626 5.17678 14.2374 5.17678 14.5303 5.46967L20.5303 11.4697C20.8232 11.7626 20.8232 12.2374 20.5303 12.5303L14.5303 18.5303C14.2374 18.8232 13.7626 18.8232 13.4697 18.5303C13.1768 18.2374 13.1768 17.7626 13.4697 17.4697L18.1893 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H18.1893L13.4697 6.53033C13.1768 6.23744 13.1768 5.76256 13.4697 5.46967Z" fill="#000000"></path> </g></svg></button>
+            </div>
         </div>
     </section>
 
-    <script src="assets/js/pokemon-model.js"></script>
-    <script src="assets/js/poke-api.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 </html>

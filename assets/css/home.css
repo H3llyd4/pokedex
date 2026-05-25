@@ -38,14 +38,14 @@ header{
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-left: 0.5rem;
 }
 
 header h1 {
     font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 45px;
+    margin-top: 25px;
+    margin-bottom: 40px;
 }
 
 .search{
@@ -104,7 +104,23 @@ header h1 {
     img{
         width: 72px;
         height: 72px;
-        margin-left: 7px;
+       
+    }
+}
+
+.options .pokedex{
+    background: linear-gradient(180deg, #DF3133 0%, #7B0607 100%);
+
+    img{
+        margin-left: 0.5rem;
+    }
+}
+
+.options .movies{
+    background: linear-gradient(180deg, #F1A22B 0%, #CC5C0C 100%);
+
+    img{
+        margin-left: 1rem;
     }
 }
 
@@ -112,3 +128,90 @@ header h1 {
     background-color: #B0B0B0;
     cursor: pointer;
 }
+
+.attend {
+    margin-top: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+
+
+    h2{
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-bottom: 2px solid #CFCFCF;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    width: 100%;    
+}
+
+.attend .movies-list{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    list-style: none;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 5px;
+
+    
+}
+
+.attend .movies-list::-webkit-scrollbar {
+    display: none;
+}
+.attend .movies-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+
+.attend .movies-list iframe {
+        width: 200px;
+        height: 120px;
+        border: none;
+        border-radius: 20px;
+}
+
+.attend .arrow-left, .attend .arrow-right {
+    position: absolute;
+    top: 35%;
+    background: #b0b0b075;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+
+    
+}
+
+.attend .arrow-left {
+    left: -10px;
+    display: none;
+}
+
+.attend .arrow-right {
+    right: -10px;
+}
+
+.attend .arrow-left svg, .attend .arrow-right svg {
+    width: 40px;
+    height: 40px;
+}
+
+.attend .arrow-left:hover, .attend .arrow-right:hover{
+    transform: scale(1.2);
+}
+

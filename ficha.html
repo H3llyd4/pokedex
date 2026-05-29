@@ -8,54 +8,112 @@
 </head>
 <body>
     <section class="content">
-        <header>
-            <a href="index.html">
-                    <svg width="24px" height="24px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" class="arrow">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_left [#000000]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -6679.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M338.61,6539 L340,6537.594 L331.739,6528.987 L332.62,6528.069 L332.615,6528.074 L339.955,6520.427 L338.586,6519 C336.557,6521.113 330.893,6527.014 329,6528.987 C330.406,6530.453 329.035,6529.024 338.61,6539" id="arrow_left-[#000000]" class="arrow"> </path> </g> </g> </g> </g>
-                    </svg>
-                </a>
+        <header class="top-bar">
+        <a href="pokedex.html">
+            <svg width="24px" height="24px" viewBox="-4.5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FFFFFF" class="arrow">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_left [#000000]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -6679.000000)" fill="#FFFFFF"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M338.61,6539 L340,6537.594 L331.739,6528.987 L332.62,6528.069 L332.615,6528.074 L339.955,6520.427 L338.586,6519 C336.557,6521.113 330.893,6527.014 329,6528.987 C330.406,6530.453 329.035,6529.024 338.61,6539" id="arrow_left-[#000000]" class="arrow"> </path> </g> </g> </g> </g>
+            </svg>
+        </a>
+        <div class="name-and-id">
             <h1>Bulbasaur</h1>
-        </header>
-        <div class="pokemon-header">
-            <ul class="types">
-                <li class="type grass">Grass</li>
-                <li class="type poison">Poison</li>
-            </ul>
             <span class="number">#001</span>
         </div>
+    </header>
+    <div class="pokemon-header">
+        
+        <ul class="types">
+            <li class="type grass">Grass</li>
+            <li class="type poison">Poison</li>
+        </ul>
+    </div>
+<div class="top-section">
         <div class="pokemon-image">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
         </div>
-        <div class="pokemon-detail">
-            <h2>About</h2>
-            <ul class="about">
-                <li><strong>Species:</strong> Seed</li>
-                <li><strong>Height:</strong> 0.7 m</li>
-                <li><strong>Weight:</strong> 6.9 kg</li>
-                <li><strong>Abilities:</strong> Overgrow, Chlorophyll</li>
+    </div>
 
-                <ul class="breeding">
-                    <h3>Breeding</h3>
-                    <li><strong>Gender:</strong> 87.5% Male, 12.5% Female</li>
-                    <li><strong>Egg Groups:</strong> Monster</li>
-                    <li><strong>Egg Cycle:</strong> Grass</li>
-                </ul>
-            </ul>
-            <h2>Base Stats</h2>
-            <ul class="stats">
-                <li><strong>HP:</strong> 45</li>
-                <li><strong>Attack:</strong> 49</li>
-                <li><strong>Defense:</strong> 49</li>
-                <li><strong>Special Attack:</strong> 65</li>
-                <li><strong>Special Defense:</strong> 65</li>
-                <li><strong>Speed:</strong> 45</li>
-            </ul>
-            <h2>Evolution</h2>
-            <ul class="evolution">
-                <li><strong>Evolution:</strong> Ivysaur (Level 16)</li>
-                <li><strong>Evolution:</strong> Venusaur (Level 32)</li>
-            </ul>
+    <div class="pokemon-detail-card">
+        <nav class="tabs">
+            <span class="active" data-target="about">About</span>
+            <span data-target="stats">Base Stats</span>
+            <spandata-target="evolution">Evolution</span>
+        </nav>
+        
+        <div class="tab-content" id="about">
+            <div class="info-row">
+                <span class="label">Species</span>
+                <span class="value">Seed</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Height</span>
+                <span class="value">2'3.6" (0.70cm)</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Weight</span>
+                <span class="value">15.2 lbs (6.9 kg)</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Abilities</span>
+                <span class="value">Overgrow, Chlorophyll</span>
+            </div>
+
+            <h3 class="section-title">Breeding</h3>
+            
+            <div class="info-row">
+                <span class="label">Gender</span>
+                <span class="value gender-value">
+                    <span class="male">♂ 87.5%</span> 
+                    <span class="female">♀ 12.5%</span>
+                </span>
+            </div>
+            <div class="info-row">
+                <span class="label">Egg Groups</span>
+                <span class="value">Monster</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Egg Cycle</span>
+                <span class="value">Grass</span>
+            </div>
         </div>
+
+        <div class="tab-content hide" id="stats">
+            <div class="info-row">
+                <span class="label">HP</span>
+                <span class="value">45</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Attack</span>
+                <span class="value">49</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Defense</span>
+                <span class="value">49</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Sp. Atk</span>
+                <span class="value">65</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Sp. Def</span>
+                <span class="value">65</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Speed</span>
+                <span class="value">45</span>
+            </div>
+        </div>
+
+        <div class="tab-content hide" id="evolution">
+            <div class="info-row">
+                <span class="label">Stage 1</span>
+                <span class="value">Ivysaur (Level 16)</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Stage 2</span>
+                <span class="value">Venusaur (Level 32)</span>
+            </div>
+        </div>
+    </div>
     </section>
 
 </body>

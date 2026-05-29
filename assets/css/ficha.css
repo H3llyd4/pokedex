@@ -53,6 +53,7 @@ header {
    font-size: 2rem;
    margin-left: 0.5rem;
    color: #FFFFFF;
+   text-transform: capitalize;
 }
 
 .number {
@@ -86,6 +87,7 @@ header {
     padding: 0.25rem 0.5rem;
     font-size: .75rem;
     border-radius: 1rem;
+    text-transform: capitalize;
     filter: brightness(1.15);
 }
 

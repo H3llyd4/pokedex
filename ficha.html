@@ -15,20 +15,20 @@
             </svg>
         </a>
         <div class="name-and-id">
-            <h1>Bulbasaur</h1>
-            <span class="number">#001</span>
+            <h1 id="pokemonName">Bulbasaur</h1>
+            <span class="number" id="pokemonNumber">#001</span>
         </div>
     </header>
-    <div class="pokemon-header">
+    <div class="pokemon-header" id="pokemonHeader">
         
-        <ul class="types">
+        <ul class="types" id="pokemonTypes">
             <li class="type grass">Grass</li>
             <li class="type poison">Poison</li>
         </ul>
     </div>
 <div class="top-section">
         <div class="pokemon-image">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
+            <img id="pokemonImage" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
         </div>
     </div>
 
@@ -116,5 +116,8 @@
     </div>
     </section>
 
+    <script src="assets/js/pokemon-model.js"></script>
+    <script src="assets/js/poke-api.js"></script>
+    <script src="assets/js/ficha.js"></script>
 </body>
 </html>

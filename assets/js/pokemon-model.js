@@ -9,4 +9,6 @@ class Pokemon {
     weight;
     abilities = [];
     eggGroups = [];
+    stats = {};
+    evolutions = [];
 }

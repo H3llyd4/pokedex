@@ -1,5 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const pokemonId = urlParams.get('id');
+const tabs = document.querySelectorAll('.tabs span');
+const tabContents = document.querySelectorAll('.tab-content');
 
 const pokemonNameDiv = document.getElementById('pokemonName');
 const pokemonNumberDiv = document.getElementById('pokemonNumber');
@@ -11,6 +13,7 @@ const pokemonHeight = document.getElementById('pokemonHeight');
 const pokemonWeight = document.getElementById('pokemonWeight');
 const pokemonAbilitiesUl = document.getElementById('pokemonAbilities');
 const pokemonEggGroups = document.getElementById('pokemonEggGroups');
+const evolutionList = document.getElementById('evolutionList')
 
 
 
@@ -44,7 +47,33 @@ if (pokemonId) {
 
         pokemonEggGroups.innerText = pokemon.eggGroups.join(', ');
 
+        document.getElementById('statHp').innerText = pokemon.stats.hp;
+        document.getElementById('statAtk').innerText = pokemon.stats.attack;
+        document.getElementById('statDef').innerText = pokemon.stats.defense;
+        document.getElementById('statSpAtk').innerText = pokemon.stats.spAtk;
+        document.getElementById('statSpDef').innerText = pokemon.stats.spDef;
+        document.getElementById('statSpd').innerText = pokemon.stats.speed;
+
+        const evolutionsHTML = pokemon.evolutions.map((evoName, index) => `
+            <div class="info-row">
+                <span class="label" style="margin-bottom: 0.8rem;">Stage ${index + 1}</span>
+                <span class="value" style="text-transform: capitalize; margin-bottom: 0.8rem;">${evoName}</span>
+            </div>
+        `).join('');
+
+        evolutionList.innerHTML = evolutionsHTML;
+
     });
 } else {
     window.location.href = 'pokedex.html';
 }
+
+tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.add('hide'));
+        tab.classList.add('active');
+        const target = tab.getAttribute('data-target');
+        document.getElementById(target).classList.remove('hide');
+    });
+})

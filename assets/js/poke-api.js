@@ -17,6 +17,15 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.weight = pokeDetail.weight;
     pokemon.abilites = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name);
 
+    pokemon.stats = {
+        hp: pokeDetail.stats[0].base_stat,
+        attack: pokeDetail.stats[1].base_stat,
+        defense: pokeDetail.stats[2].base_stat,
+        spAtk: pokeDetail.stats[3].base_stat,
+        spDef: pokeDetail.stats[4].base_stat,
+        speed: pokeDetail.stats[5].base_stat
+    };
+
     return pokemon;
 
 }
@@ -49,7 +58,22 @@ pokeApi.getPokemonDetailById = (id) => {
             .then(speciesDetail => {
                 pokemon.eggGroups = speciesDetail.egg_groups.map(eggGroup => eggGroup.name);
 
-            return pokemon;
-        })
-})
+                return fetch(speciesDetail.evolution_chain.url)
+                    .then(responseEvolution => responseEvolution.json())
+                    .then(evolutionDetail => {
+                        const evolutions = [];
+                        let currentEvolution = evolutionDetail.chain;
+
+                        do {
+                            evolutions.push(currentEvolution.species.name);
+                            currentEvolution = currentEvolution.evolves_to[0];
+                        } while (currentEvolution && currentEvolution.hasOwnProperty('evolves_to'));
+
+                        pokemon.evolutions = evolutions;
+
+                        return pokemon;
+                    });
+            });
+
+        });
 }

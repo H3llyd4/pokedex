@@ -52,3 +52,17 @@ header {
     
     cursor: pointer;
 }
+
+a,
+button,
+.pokemon,
+.tabs span,
+.options .pokedex,
+.options .movies {
+    transition: all .25s ease;
+}
+
+a:hover,
+button:hover {
+    opacity: .95;
+}

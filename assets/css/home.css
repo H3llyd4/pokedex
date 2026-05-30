@@ -137,6 +137,7 @@ header h1 {
 .options .pokedex:hover, .options .movies:hover{
     background-color: #B0B0B0;
     cursor: pointer;
+    transform: translateY(-2px);
 }
 
 .attend {
@@ -189,6 +190,7 @@ header h1 {
         height: 120px;
         border: none;
         border-radius: 20px;
+        transition: transform .25s ease;
 }
 
 .attend .arrow-left, .attend .arrow-right {
@@ -223,6 +225,10 @@ header h1 {
 
 .attend .arrow-left:hover, .attend .arrow-right:hover{
     transform: scale(1.2);
+}
+
+.attend .movies-list iframe:hover{
+    transform: scale(1.02);
 }
 
 /* Telas maiores - mantém base mobile intacta */

@@ -67,6 +67,7 @@
     margin: 0.5rem;
     padding: 1rem;
     border-radius: 1rem;
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .pokemon .name{
@@ -130,4 +131,14 @@
     padding: 0.25rem 0.5rem;
     margin: 0.25rem 0;
     cursor: pointer;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.pokemon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.pagination button:hover {
+    transform: translateY(-1px);
 }

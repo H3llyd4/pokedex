@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f6f8fc;
+}
+
+.content{
+    min-height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    background-color: #FFF;
+    position: relative;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    right: -64px;
+    width: 294px;
+    height: 294px;
+    background: url(../image/pokeball.png) no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .75rem;
+    margin-top: 25px;
+    margin-left: 0.5rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attend {
+    margin-top: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.attend h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #CFCFCF;
+    margin-bottom: 0.5rem;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+
+.attend .movies-list{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    list-style: none;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 5px;
+}
+
+.attend .movies-list::-webkit-scrollbar {
+    display: none;
+}
+.attend .movies-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.movie-item{
+    min-width: 200px;
+}
+
+.attend .movies-list iframe {
+    width: 200px;
+    height: 120px;
+    border: none;
+    border-radius: 20px;
+}
+
+.attend .arrow-left, .attend .arrow-right {
+    position: absolute;
+    top: 30%;
+    background: #b0b0b075;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color .2s ease;
+}
+
+.attend .arrow-left {
+    left: -10px;
+    display: none;
+}
+
+.attend .arrow-right {
+    right: -10px;
+}
+
+.attend .arrow-left svg, .attend .arrow-right svg {
+    width: 40px;
+    height: 40px;
+}
+
+.attend .arrow-left:hover, .attend .arrow-right:hover{
+    transform: scale(1.12);
+    background: #b0b0b0c2;
+}
+
+@media screen and (min-width: 768px) {
+    .content{
+        max-width: 982px;
+        min-height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+
+    .attend .movies-list{
+        gap: 2rem;
+    }
+
+    .movie-item{
+        min-width: 300px;
+    }
+
+    .attend .movies-list iframe{
+        width: 300px;
+        height: 170px;
+    }
+}

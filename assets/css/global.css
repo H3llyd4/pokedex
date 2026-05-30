@@ -11,6 +11,12 @@
 
 body {
     background-color: #f6f8fc;
+    opacity: 1;
+    transition: opacity .22s ease;
+}
+
+body.page-transition {
+    opacity: 0;
 }
 
 .content{

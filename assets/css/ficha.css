@@ -34,58 +34,58 @@ body {
     z-index: -1;
 }
 
-.normal { 
+.normal, .normal .tabs span.active::after{ 
     background-color: #A8A77A;
 }
-.fire { 
+.fire, .fire .tabs span.active::after{ 
     background-color: #EE8130;
 }
-.water { 
+.water, .water .tabs span.active::after { 
     background-color: #6390F0;
 }
-.electric { 
+.electric, .electric .tabs span.active::after{ 
     background-color: #F7D02C;
 }
-.grass { 
+.grass, .grass .tabs span.active::after{ 
     background-color: #7AC74C;
 }
-.ice { 
+.ice, .ice .tabs span.active::after{ 
     background-color: #96D9D6;
 }
-.fighting { 
+.fighting, .fighting .tabs span.active::after{ 
     background-color: #C22E28;
 }
-.poison { 
+.poison, .poison .tabs span.active::after{ 
     background-color: #A33EA1;
 }
-.ground { 
+.ground, .ground .tabs span.active::after{ 
     background-color: #E2BF65;
 }
-.flying { 
+.flying, .flying .tabs span.active::after{ 
     background-color: #A98FF3;
 }
-.psychic { 
+.psychic, .psychic .tabs span.active::after{ 
     background-color: #F95587;
 }
-.bug { 
+.bug, .bug .tabs span.active::after{ 
     background-color: #A6B91A;
 }
-.rock { 
+.rock, .rock .tabs span.active::after{ 
     background-color: #B6A136;
 }
-.ghost { 
+.ghost, .ghost .tabs span.active::after{ 
     background-color: #735797;
 }
-.dragon { 
+.dragon, .dragon .tabs span.active::after{ 
     background-color: #6F35FC;
 }
-.dark { 
+.dark, .dark .tabs span.active::after{ 
     background-color: #705746;
 }
-.steel { 
+.steel, .steel .tabs span.active::after{ 
     background-color: #B7B7CE;
 }
-.fairy { 
+.fairy, .fairy .tabs span.active::after{ 
     background-color: #D685AD;
 }
 

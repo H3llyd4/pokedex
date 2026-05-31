@@ -1,6 +1,7 @@
 const btnRight = document.getElementById('arrow-right');
 const btnLeft = document.getElementById('arrow-left');
 const moviesList = document.getElementById('moviesList');
+const searchInput = document.getElementById('searchInput');
 
 const menuToggle = document.getElementById('menuToggle');
 const menuClose = document.getElementById('menuClose');
@@ -24,6 +25,15 @@ menuOverlay?.addEventListener('click', closeMenu);
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeMenu();
+});
+
+searchInput?.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        const pokemonName = searchInput.value.trim().toLowerCase();
+        if (pokemonName !== '') {
+            window.location.href = `ficha.html?id=${pokemonName}`;
+        }
+    }
 });
 
 pageLinks.forEach((link) => {

@@ -128,7 +128,9 @@ header h1 {
 
 .attend .arrow-right {
     right: -10px;
-    display: none;
+    display: none
+    
+    ;
 }
 
 .attend .arrow-left svg, .attend .arrow-right svg {
